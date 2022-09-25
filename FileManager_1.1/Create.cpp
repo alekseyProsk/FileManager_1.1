@@ -30,7 +30,7 @@ void Create::createFile()
 
 	ofstream file(a);
 	file.close();
-	if (check(a))
+	if (!check(a))
 		cout << "Ошибка " << endl;
 	
 }
@@ -99,16 +99,16 @@ void Create::Copy()
 	myPathTo = to;
 
 
-	std::filesystem::copy_options myOptions;
-	myOptions = std::filesystem::copy_options::none;
+	fs::copy_options myOptions;
+	myOptions = fs::copy_options::none;
 
 	try
 	{
-		std::filesystem::copy(myPathFrom, myPathTo, myOptions);
+		fs::copy(myPathFrom, myPathTo, myOptions);
 	}
 	catch (const std::filesystem::filesystem_error& e)
 	{
-		std::cout << e.what() << std::endl;   //Ошибки не отлавливаются, все завершается успешно.
+		cout << e.what() << std::endl;   //Ошибки не отлавливаются, все завершается успешно.
 	}
 	
 }
@@ -129,9 +129,6 @@ bool Create::getSize()
 		cout << "Файл не существует ";
 		return false;
 	}
-		
-	
-	
 	
 	if (size > 1000000)
 	{
@@ -157,13 +154,13 @@ bool Create::getSize()
 bool Create::check(string mPath)
 {
 	ifstream check(mPath);
-	if (check.bad())
+	if (!check.bad())
 	{
 		cout << "Успешно! " << endl;
 		return true;
 		
 	}
-	else if (!check.bad())
+	else if (check.bad())
 	{
 		cout << "Файл не существует " << endl;
 		return false;

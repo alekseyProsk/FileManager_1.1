@@ -38,8 +38,8 @@ int Menu::MainMenu()
 	
 	Create c; // Создаем Объект для махинаций в функциях меню
 	
-	int c0 = 0;
-	int c3 = 0;
+	int c0 = 0;//switch(c0)
+	int c3 = 0;//switch(c3)
 
 	while (true)
 	{
@@ -128,7 +128,8 @@ int Menu::MainMenu()
 						{
 							system("CLS");
 							GoToXY(x, y);
-							SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+							SetConsoleTextAttribute(hStdOut, FOREGROUND_RED |
+								FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 							c.createFile();
 							_getch();
 							system("CLS");
@@ -138,7 +139,8 @@ int Menu::MainMenu()
 						{
 							system("CLS");
 							GoToXY(x, y);
-							SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+							SetConsoleTextAttribute(hStdOut, FOREGROUND_RED |
+								FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 							c.createDirectory();
 							_getch();
 							system("CLS");
@@ -161,7 +163,8 @@ int Menu::MainMenu()
 		{
 			system("CLS");
 			GoToXY(x, y);
-			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED |
+				FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 			c.Remove();
 			_getch();
 			system("CLS");
@@ -172,7 +175,8 @@ int Menu::MainMenu()
 			system("CLS");
 			GoToXY(x, y);
 			bool what = true;
-			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED |
+				FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 			c.Rename(what);
 			_getch();
 			system("CLS");
@@ -231,7 +235,8 @@ int Menu::MainMenu()
 						system("CLS");
 						GoToXY(x, y);
 
-						SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+						SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | 
+							FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 						c.Rename(what);
 						_getch();
 						system("CLS");
@@ -241,7 +246,8 @@ int Menu::MainMenu()
 					{
 						system("CLS");
 						GoToXY(x, y);
-						SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+						SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | 
+							FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 						c.Copy();
 						_getch();
 						system("CLS");
@@ -252,7 +258,8 @@ int Menu::MainMenu()
 						system("CLS");
 						GoToXY(x, y);
 						what = false;
-						SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+						SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | 
+							FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 						c.Rename(what);
 						_getch();
 						system("CLS");
@@ -277,7 +284,8 @@ int Menu::MainMenu()
 		{
 			system("CLS");
 			GoToXY(x, y);
-			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | 
+				FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 			c.getSize();
 			_getch();
 			system("CLS");
@@ -287,7 +295,8 @@ int Menu::MainMenu()
 		{
 			system("CLS");
 			GoToXY(x, y);
-			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | 
+				FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 			string NAMEDisk;
 			cout << "Введите букву диска " << endl;
 			getline(cin, NAMEDisk);

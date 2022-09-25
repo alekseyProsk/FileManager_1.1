@@ -17,7 +17,7 @@ class Create : public FileSystem
 {
 public:
 	Create() = default;
-	Create(FileSystem& disk, const string& pathUS) : FileSystem{ disk }
+	Create(const FileSystem& disk, const string& pathUS) : FileSystem{ disk }
 	{
 		string buff;
 		buff = pathUS;
@@ -33,7 +33,7 @@ public:
 	bool check(string mPath);
 	void Copy();
 
-protected:
+private:
 	string path;
 };
 
